@@ -51,3 +51,10 @@ hashcat -m 1000 -a 0 ntlm.txt /usr/share/wordlists/rockyou.txt --force --show > 
 use -m 160 to compute with salt as **hash:salt** on the hmac_sha1.txt file
 
 hashcat -m 160 -a 0 hmac_sha1.txt /usr/share/wordlists/rockyou.txt --force --show > hmac_sha1_cracked.txt
+
+#### BCrypt with Salt
+
+ $6$aReallyHardSalt$6WKUTqzq.UQQmrm0p/T7MPpMbGNnzXPMAXi4bJMl9be.cfi3/qxIf.hsGpS41BqMhSrHVXgMpdjS6xeKZAs02
+
+ mode 110?
+ 
