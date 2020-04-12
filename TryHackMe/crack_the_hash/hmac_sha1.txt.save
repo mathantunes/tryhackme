@@ -1,0 +1,1 @@
+hashcat -m 1000 -a 0 ntlm.txt /usr/share/wordlists/rockyou.txt --force --show > ntlm_cracked.txt
