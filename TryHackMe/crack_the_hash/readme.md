@@ -57,4 +57,3 @@ hashcat -m 160 -a 0 hmac_sha1.txt /usr/share/wordlists/rockyou.txt --force --sho
  $6$aReallyHardSalt$6WKUTqzq.UQQmrm0p/T7MPpMbGNnzXPMAXi4bJMl9be.cfi3/qxIf.hsGpS41BqMhSrHVXgMpdjS6xeKZAs02
 
  mode 110?
- 
