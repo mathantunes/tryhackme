@@ -1,6 +1,6 @@
 # Matheus Jesus 12-04-2020
 
-## Try Hack Me - The Cod Caper (https://tryhackme.com/room/thecodcaper)
+## Try Hack Me - [The Cod Caper](https://tryhackme.com/room/thecodcaper)
 
 ### IP 10.10.109.156
 
@@ -13,7 +13,9 @@ port 22 port 80
 
 #### Web Enumeration
 
+```sh
 gobuster dir -u http://10.10.109.156:80 -w /usr/share/dirbuster/wordlists/directory-list-2.3-medium.txt -x php,txt
+```
 
 Found route
 /administrator.php (Status: 200)
