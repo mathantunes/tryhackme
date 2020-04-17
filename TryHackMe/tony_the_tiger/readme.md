@@ -10,6 +10,18 @@
 8080 Jboss
 22 SSH
 
+#### Blog
+
+On blog, download the [image](https://i.imgur.com/be2sOV9.jpg)
+
+```sh
+strings wtf2.jpg
+```
+
+It will display the flag THM{Tony_Sure_Loves_Frosted_Flakes}
+
+#### Exploiting
+
 After downloading the exploit, run command to start a reverse shell
 
 ```sh
@@ -35,6 +47,8 @@ hidden file on /home/jboss -> .jboss revealed the flag
 
 THM{50c10ad46b5793704601ecdad865eb06}
 
+#### Rooting
+
 scp linpeas.sh over to the host
 
 the user jboss is able to run /usr/bin/find as root
@@ -48,6 +62,16 @@ ROOT  [SUID](https://www.andreafortuna.org/2018/05/16/exploiting-sudo-for-linux-
 /root/root.txt
 QkM3N0FDMDcyRUUzMEUzNzYwODA2ODY0RTIzNEM3Q0Y==
 
-It seems to be encrypted but hashid did not recognize it.
+Seems to be under base64 encoding
 
-Found a possible CISCO SHA256 encryption
+Decoded -> bc77ac072ee30e3760806864e234c7cf
+
+hashid bc77ac072ee30e3760806864e234c7cf
+
+MD5
+
+```sh
+hashcat -a 0 -m 0 BC77AC072EE30E3760806864E234C7CF /usr/share/wordlists/rockyou.txt --force
+```
+
+bc77ac072ee30e3760806864e234c7cf:zxcvbnm123456789
