@@ -46,3 +46,17 @@ For audio, they utilize **Sonic Visualize**
 broke the message ~"Google"
 
 ### Final Exam
+
+#### Server on 80
+
+#### Exam1
+
+Download png file
+
+```sh
+strings on exam1.png
+#password=admin
+steghide extract -p admin -sf exam1.jpeg -v -xf exam1.txt
+#the key is: superkeykey
+```
+
