@@ -60,3 +60,25 @@ steghide extract -p admin -sf exam1.jpeg -v -xf exam1.txt
 #the key is: superkeykey
 ```
 
+#### Exam2
+
+Download the .wav file
+Run on Online Spectrum analyzer -> found a [URL](https://imgur.com/KTrtNI5)
+Download the image
+
+```sh
+zsteg image.png
+#rKey: fatality"
+```
+
+#### Exam3
+
+QRCode
+Scanned and nothing found
+
+```sh
+stegveritas qrcode.png
+```
+
+On the results folder, it generated images with correct coloring of QRCode
+scan it -> key=killshot
