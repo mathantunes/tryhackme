@@ -1,6 +1,6 @@
 # Matheus Jesus 03-04-2020
 
-## Try Hack Me - Blue (https://tryhackme.com/room/blue)
+## Try Hack Me - [Blue](https://tryhackme.com/room/blue)
 
 ### IP 10.10.130.202
 

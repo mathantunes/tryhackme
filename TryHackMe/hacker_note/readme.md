@@ -1,6 +1,6 @@
 # Matheus Jesus 12-04-2020
 
-## Try Hack Me - Hacker Note (https://tryhackme.com/room/hackernote)
+## Try Hack Me - [Hacker Note](https://tryhackme.com/room/hackernote)
 
 ### IP 10.10.229.108
 
@@ -15,7 +15,7 @@ golang http server on 8080
 
 #### Investigation
 
-##### User Enum reference - https://github.com/NinjaJc01/hackerNoteExploits
+##### User Enum reference - [Here](https://github.com/NinjaJc01/hackerNoteExploits)
 
 created an account admin:admin on /login
 
@@ -31,7 +31,7 @@ james is our user to be attacked
 
 ##### James Hint - "Hint: My favourite colour and my favourite number"
 
-##### Combine password reference https://github.com/hashcat/hashcat-utils/releases
+##### Combine password [reference](https://github.com/hashcat/hashcat-utils/releases)
 
 Downloaded a colors.txt wordlist
 
@@ -58,7 +58,7 @@ The perl command shows the OS is not patched against CVE-2019-18634
 perl -e 'print(("A" x 100 . "\x{00}") x 50)' | sudo -S id
 [sudo] password for james: Segmentation fault (core dumped)
 
-##### Exploit reference https://github.com/saleemrashid/
+##### Exploit [reference](https://github.com/saleemrashid/)
 
 gcc escalate.c -o run
 chmod +x run
