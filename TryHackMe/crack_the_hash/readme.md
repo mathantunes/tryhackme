@@ -1,6 +1,6 @@
 # Matheus Jesus 04-04-2020
 
-## Try Hack Me - Crack the Hash (https://tryhackme.com/room/crackthehash)
+## Try Hack Me - [Crack the Hash](https://tryhackme.com/room/crackthehash)
 
 ### Level 1
 
