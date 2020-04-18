@@ -1,6 +1,6 @@
 # Matheus Jesus 06-04-2020
 
-## Try Hack Me - Blueprint (https://tryhackme.com/room/blueprint)
+## Try Hack Me - [Blueprint](https://tryhackme.com/room/blueprint)
 
 ## REF https://www.embeddedhacker.com/2019/12/hacking-walkthrough-thm-blueprint/
 
@@ -8,7 +8,7 @@
 
 ### 8080/tcp  open  http         Apache httpd 2.4.23 (OpenSSL/1.0.2h PHP/5.6.28)
 
-### exploit-db on OSCommerce CMS - https://www.exploit-db.com/exploits/44374
+### exploit-db on OSCommerce CMS - [Here](https://www.exploit-db.com/exploits/44374)
 
 ### Exploiting
 
