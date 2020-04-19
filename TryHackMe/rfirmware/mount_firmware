@@ -1,0 +1,25 @@
+#Step 1 
+#If /dev/mtdblock0 exists, remove file/directory and re-create the block device
+rm -rf /dev/mtdblock0
+mknod /dev/mtdblock0 b 31 0
+
+#Step 2
+#Create a location for the jffs2 filesysystem to
+mkdir /mnt/jffs2_file/
+
+#Step 3
+#Load required kernel modules
+modprobe jffs2
+modprobe mtdram
+modprobe mtdblock
+
+#Step 4
+#Write image to /dev/mtdblock0
+dd if=./_fw_wrt1900acsv2.img.extracted/600000.jffs2 of=/dev/mtdblock0
+
+#Step 5
+#Mount file system to folder location
+mount -t jffs2 /dev/mtdblock0 /mnt/jffs2_file/
+
+#Finally CD In
+cd /mnt/jffs2_file/

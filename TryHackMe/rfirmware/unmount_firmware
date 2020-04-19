@@ -1,0 +1,6 @@
+#Step 1 
+#If /dev/mtdblock0 exists, remove file/directory and re-create the block device
+rm -rf /dev/mtdblock0
+
+umount /mnt/jffs2_file
+rm -rf /mnt/jffs2_file
