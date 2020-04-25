@@ -14,19 +14,22 @@ type MessageEval struct {
 	key rune
 }
 
-// X Cooking MC's like a pound of bacon
+/*
+[Challenge 3] Single-byte XOR cipher
+
+The hex encoded string:
+
+    1b37373331363f78151b7f2b783431333d78397828372d363c78373e783a393b3736
+.. has been XOR'd against a single character. Find the key, decrypt the message.
+*/
+
 
 /* 
-	go run c3.go -w1 1b37373331363f78151b7f2b783431333d78397828372d363c78373e783a393b3736  
+	go run c3.go -w1 1b37373331363f78151b7f2b783431333d78397828372d363c78373e783a393b3736
+	Cooking MC's like a pound of bacon
 */
-func main() {
-	w1Ptr := flag.String("w1", "0", "word 1")
 
-	flag.Parse()
-	bytes1 := []byte(*w1Ptr)
-	hex1 := make([]byte, hex.DecodedLen(len(bytes1)))
-	hex.Decode(hex1, []byte(*w1Ptr))
-
+func TryAllCharacters(hex1 []byte) []MessageEval {
 	characters := map[rune]float64 {
 		'a': .08167, 'b': .01492, 'c': .02782, 'd': .04253,
         'e': .12702, 'f': .02228, 'g': .02015, 'h': .06094,
@@ -37,6 +40,7 @@ func main() {
         'y': .01974, 'z': .00074, ' ': .13000,
 	}
 	msgs := make([]MessageEval,0)
+
 	for i:=0; i < 256; i++ {
 
 		output := make([]byte, 0)
@@ -57,13 +61,26 @@ func main() {
 			key : rune(i),
 		})
 	}
+
+	return msgs
+}
+
+func main() {
+	w1Ptr := flag.String("w1", "0", "word 1")
+	flag.Parse()
+
+	bytes1 := []byte(*w1Ptr)
+	hex1 := make([]byte, hex.DecodedLen(len(bytes1)))
+	hex.Decode(hex1, []byte(*w1Ptr))
+
+	msgs := TryAllCharacters(hex1)
 	
 	sort.Slice(msgs[:], func(i, j int) bool {
 		return msgs[i].score < msgs[j].score
 	})
 
 	for _, v := range msgs {
-		fmt.Printf("%v \n\n", v )
+		fmt.Printf("%+v  AND String character is %s \n\n", v, string([]rune{v.key}) )
 	}
 	return
 }

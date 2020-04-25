@@ -33,3 +33,30 @@ go run c3.go -w1 1b37373331363f78151b7f2b783431333d78397828372d363c78373e783a393
 ```
 
 ### Challenge 4
+
+```sh
+go run c4.go -w set1_challenge4 > out.txt
+# {Now that the party is jumping 2.03479 53}
+```
+
+### Challenge 5
+
+```sh
+go run c5.go -w="Burning 'em, if you ain't quick and nimble" -k=ICE
+# 0b3637272a2b2e63622c2e69692a23693a2a3c6324202d623d63343c2a26226324272765272a282b2f20
+```
+
+### Challenge 6
+
+Break repeating-key XOR
+
+```sh
+go run c6.go -w set1_challenge6 
+# Key:  tER(InAtOR x: brinG tHe NOiSe
+```
+
+### Challenge 7
+
+```sh
+python c7.py > output.txt
+```
