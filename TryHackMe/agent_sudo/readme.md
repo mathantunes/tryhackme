@@ -72,7 +72,7 @@ Agent R
 ```sh
 echo QXJlYTUx | base64 -d
 #Area51
-steghide extract -p Area51 -sf cute-alien.jpg -v -xf msg_cute-alien.txt 
+steghide extract -p Area51 -sf cute-alien.jpg -v -xf msg_cute-alien.txt
 # Hi james,
 # Glad you find this message. Your login password is hackerrules!
 # Don't ask me why the password look cheesy, ask agent R who set this password for you.
